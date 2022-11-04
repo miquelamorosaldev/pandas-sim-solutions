@@ -10,7 +10,7 @@ import q2_sol
 def test_get_total_deaths():
 
     # Read input and correct result
-    entries:  pd.DataFrame = pd.read_csv("data/tycho-fixed.csv",  sep=",")
+    entries:  pd.DataFrame = pd.read_csv("data/tycho-fixed22.csv",  sep=",")
     deaths:   pd.DataFrame = pd.read_csv("output/q2_ranking_deaths.csv", sep=",")
 
     # Get result

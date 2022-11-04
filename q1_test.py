@@ -1,7 +1,6 @@
 # Imports
 import pandas  as pd
-import q1_sol
-import q1
+import q1_sol_miquel
 
 # -----------------------------------------------------------------------------
 # Test: test_fix_broken_tycho()
@@ -15,7 +14,7 @@ def test_fix_broken_tycho():
     fixed_entries:  pd.DataFrame = pd.read_csv("data/tycho-fixed22.csv",  sep=",")
 
     # Get result
-    result: pd.DataFrame = q1.fix_broken_tycho(broken_entries)
+    result: pd.DataFrame = q1_sol_miquel.fix_broken_tycho(broken_entries)
 
     # Test
     pd.testing.assert_frame_equal(result, fixed_entries)

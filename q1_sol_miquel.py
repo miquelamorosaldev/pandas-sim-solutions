@@ -69,7 +69,7 @@ def fix_broken_tycho(entries: pd.DataFrame) -> pd.DataFrame:
 
     ## Fixing step 5 ans 7 Add a new column called 'id' with a numerical unique identifier starting from 0
     ## and reassign dataframe fields.
-    fixed_entries = fixed_entries.reset_index(drop=True).assign(id=lambda df: df.index)
+    fixed_entries = fixed_entries.reset_index().assign(id=lambda df: df.index)
     fixed_entries = fixed_entries.reindex(columns=sorted_columns)
 
     return fixed_entries
@@ -82,7 +82,12 @@ if __name__ == "__main__":
     broken_entries: pd.DataFrame = pd.read_csv("data/tycho-broken22.csv", sep=",")
     fixed_entries:  pd.DataFrame = fix_broken_tycho(broken_entries)
     
-    fixed_entries.to_csv("data/tycho-fixed22.csv", sep=",", index=False)
+    print(fixed_entries.shape)
+
+    fixed_entries_old: pd.DataFrame = pd.read_csv("data/tycho-fixed22.csv", sep=",")
+    print(fixed_entries_old.shape)
+
+    #fixed_entries.to_csv("data/tycho-fixed22.csv", sep=",", index=False)
     print(fixed_entries.head(20))
 
 # -----------------------------------------------------------------------------
