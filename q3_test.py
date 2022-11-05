@@ -3,11 +3,11 @@ import pandas  as pd
 import q3_sol
 
 # -----------------------------------------------------------------------------
-# Test: test_get_ambiguous_cities()
+# Test: q3_epiweeks_not7days()
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-def test_get_ambiguous_cities():
+def q3_epiweeks_not7days():
 
     # Read input and correct result
     entries:            pd.DataFrame = pd.read_csv("data/tycho-fixed.csv", sep=",")
