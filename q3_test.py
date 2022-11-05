@@ -7,7 +7,7 @@ import q3_sol
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
-def q3_epiweeks_not7days():
+def test_q3_epiweeks_not7days():
 
     # Read input and correct result
     entries:            pd.DataFrame = pd.read_csv("data/tycho-fixed.csv", sep=",")
